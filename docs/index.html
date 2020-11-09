@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="ru">
+
+    <head>
+        <meta charset="UTF-8">
+        <title>Template</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+
+    <body class="o-page">
+        <div id="app">
+            <header class="c-header">
+                <div class="container d-flex align-items-center justify-content-between">
+                    <div class="d-flex align-items-center">
+                        <h1 class="c-logo"><a class="c-logo__link" href="#"><img src="./img/content/logo.png" alt=""></a></h1>
+                        <div class="c-nav">
+                            <ul class="c-nav__list">
+                                <li class="c-nav__item"><a class="c-nav__link" href="#">Расписание</a></li>
+                                <li class="c-nav__item"><a class="c-nav__link" href="#">Посылки</a></li>
+                                <li class="c-nav__item"><a class="c-nav__link" href="#">Тарифы</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-center">
+                        <button class="c-btn c-btn_float c-btn_lg mr-4 c-header__action c-header__action_call">
+                            <svg width="21" height="21">
+                                <use href="#phone"></use>
+                            </svg>
+                        </button>
+                        <div class="d-flex flex-column"><a class="c-phone c-phone_lg mb-3" href="#">+7 (812) 966-55-22</a><a class="c-phone c-phone_lg" href="#">+7 (812) 966-55-22</a></div>
+                        <button class="c-btn c-btn_primary c-btn_xl c-header__order-call" type="button" v-b-modal.order-call>Заказать звонок</button>
+                    </div>
+                </div>
+            </header>
+            <div class="c-hero"><img class="c-hero__img" src="./img/content/hero.jpg" alt=""></div>
+            <div class="container">
+                <section class="c-section">
+                    <div class="c-section__title">Почему стоит выбрать нас</div>
+                    <div class="c-section__body">
+                        <div class="c-advantages d-flex align-items-center justify-content-between">
+                            <div class="c-advantages__item d-flex align-items-start">
+                                <svg class="c-advantages__icon flex-shrink-0">
+                                    <use href="#pin"></use>
+                                </svg>
+                                <div class="d-flex flex-column ml-4">
+                                    <h4 class="c-advantages__title">Заголовок преимущества</h4>
+                                    <p class="c-advantages__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut</p>
+                                </div>
+                            </div>
+                            <div class="c-advantages__item d-flex align-items-start">
+                                <svg class="c-advantages__icon flex-shrink-0">
+                                    <use href="#bus"></use>
+                                </svg>
+                                <div class="d-flex flex-column ml-4">
+                                    <h4 class="c-advantages__title">Заголовок преимущества</h4>
+                                    <p class="c-advantages__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut</p>
+                                </div>
+                            </div>
+                            <div class="c-advantages__item d-flex align-items-start">
+                                <svg class="c-advantages__icon flex-shrink-0">
+                                    <use href="#timer"></use>
+                                </svg>
+                                <div class="d-flex flex-column ml-4">
+                                    <h4 class="c-advantages__title">Заголовок преимущества</h4>
+                                    <p class="c-advantages__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="c-section">
+                    <div class="c-section__title">Расписание рейсов</div>
+                    <div class="c-section__body">
+                        <trip-schedule />
+                    </div>
+                </section>
+                <section class="c-section">
+                    <div class="c-section__title">Тарифы на перевозку пассажиров</div>
+                    <div class="c-section__body">
+                        <transportation-tariffs />
+                    </div>
+                </section>
+                <section class="c-section">
+                    <div class="c-section__title">Рассчитать стоимость вашего груза</div>
+                    <div class="c-section__body">
+                        <div class="c-grid-calculator">
+                            <div class="row c-grid-calculator__row">
+                                <div class="col-md-7 c-grid-calculator__col">
+                                    <div class="c-grid-calculator">
+                                        <div class="row mb-3 pb-3 c-grid-calculator__row">
+                                            <div class="col-md-6 c-grid-calculator__col">
+                                                <div class="c-card-advantage d-flex justify-content-between">
+                                                    <h4 class="c-card-advantage__title">Любого <br> размера</h4><img class="c-card-advantage__icon" src="./img/icons/size.png" alt="">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6 c-grid-calculator__col">
+                                                <div class="c-card-advantage d-flex justify-content-between">
+                                                    <h4 class="c-card-advantage__title">Хрупкие <br> поссылки</h4><img class="c-card-advantage__icon" src="./img/icons/fragile.png" alt="">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row mb-3 pb-3 c-grid-calculator__row">
+                                            <div class="col-md-6 c-grid-calculator__col">
+                                                <div class="c-card-advantage d-flex justify-content-between">
+                                                    <h4 class="c-card-advantage__title">Техника</h4><img class="c-card-advantage__icon" src="./img/icons/washer.png" alt="">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6 c-grid-calculator__col">
+                                                <div class="c-card-advantage d-flex justify-content-between">
+                                                    <h4 class="c-card-advantage__title">До дома</h4><img class="c-card-advantage__icon" src="./img/icons/door-delivery.png" alt="">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row c-grid-calculator__row">
+                                            <div class="col-md-12 c-grid-calculator__col">
+                                                <div class="c-card-advantage d-flex justify-content-between">
+                                                    <h4 class="c-card-advantage__title">Онлайн оплата наших услуг</h4><img class="c-card-advantage__icon" src="./img/icons/debit-card.png" alt="">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-5 c-grid-calculator__col d-flex align-items-stretch">
+                                    <div class="c-card-calculator">
+                                        <div class="c-card-calculator__header">
+                                            <h2 class="m-0">Рассчитать стоимость посылки</h2>
+                                        </div>
+                                        <div class="d-block">
+                                            <form-calculator />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <div class="c-banner c-banner-consultation mb-5">
+                    <div class="row d-flex align-items-center">
+                        <div class="col-md-5">
+                            <h2 class="c-banner__title">Онлайн консультация</h2>
+                            <p class="c-banner__txt pr-4">
+                                свяжитесь с консультантом в
+                                любом доступном мессенджере
+                            </p>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="c-banner-consultation__socials d-flex align-items-center"><img class="c-banner-consultation__social" src="./img/content/viber.png" alt=""><img class="c-banner-consultation__social" src="./img/content/telegram.png" alt=""><img class="c-banner-consultation__social" src="./img/content/whatsapp.png" alt=""></div>
+                        </div>
+                        <div class="col-md-3 d-flex align-items-center">
+                            <button class="c-btn c-btn_primary c-btn_xl">Заказать звонок</button>
+                        </div>
+                    </div>
+                </div>
+                <section class="c-section mb-4">
+                    <div class="c-section__title mb-3">Наши клиенты</div>
+                    <div class="c-section__body">
+                        <slider-clients />
+                    </div>
+                </section>
+                <section class="c-section">
+                    <div class="c-section__title mb-3">Отзывы о сервисе</div>
+                    <div class="c-section__body">
+                        <slider-reviews />
+                    </div>
+                </section>
+                <section class="c-section">
+                    <div class="c-section__title mb-3">Как мы работаем</div>
+                    <div class="c-section__body">
+                        <slider-we-working />
+                    </div>
+                </section>
+                <section class="c-section">
+                    <div class="c-section__title mb-3">Полезные статьи</div>
+                    <div class="c-section__body">
+                        <div class="c-grid-news">
+                            <div class="row c-grid-news__row">
+                                <div class="col-md-4 mb-3 c-grid-news__col"><a class="c-card-news" href="#" style="background: url('./img/content/news/1.jpg')">
+                                        <div class="c-card-news__info">
+                                            <h4 class="c-card-news__title mb-2">Название новости</h4><span class="c-card-news__date">19.12.2019</span>
+                                        </div>
+                                    </a></div>
+                                <div class="col-md-4 mb-3 c-grid-news__col"><a class="c-card-news" href="#" style="background: url('./img/content/news/1.jpg')">
+                                        <div class="c-card-news__info">
+                                            <h4 class="c-card-news__title mb-2">Название новости</h4><span class="c-card-news__date">19.12.2019</span>
+                                        </div>
+                                    </a></div>
+                                <div class="col-md-4 mb-3 c-grid-news__col"><a class="c-card-news" href="#" style="background: url('./img/content/news/1.jpg')">
+                                        <div class="c-card-news__info">
+                                            <h4 class="c-card-news__title mb-2">Название новости</h4><span class="c-card-news__date">19.12.2019</span>
+                                        </div>
+                                    </a></div>
+                                <div class="col-md-4 mb-3 c-grid-news__col"><a class="c-card-news" href="#" style="background: url('./img/content/news/1.jpg')">
+                                        <div class="c-card-news__info">
+                                            <h4 class="c-card-news__title mb-2">Название новости</h4><span class="c-card-news__date">19.12.2019</span>
+                                        </div>
+                                    </a></div>
+                                <div class="col-md-4 mb-3 c-grid-news__col"><a class="c-card-news" href="#" style="background: url('./img/content/news/1.jpg')">
+                                        <div class="c-card-news__info">
+                                            <h4 class="c-card-news__title mb-2">Название новости</h4><span class="c-card-news__date">19.12.2019</span>
+                                        </div>
+                                    </a></div>
+                                <div class="col-md-4 mb-3 c-grid-news__col"><a class="c-card-news" href="#" style="background: url('./img/content/news/1.jpg')">
+                                        <div class="c-card-news__info">
+                                            <h4 class="c-card-news__title mb-2">Название новости</h4><span class="c-card-news__date">19.12.2019</span>
+                                        </div>
+                                    </a></div>
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-center mt-3">
+                            <button class="c-btn c-btn_primary c-btn_lg">Все новости</button>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <b-modal id="order-call" centered modal-class="c-modal" title="Заказать звонок" header-close-content="" ok-only ok-title="Отправить">
+                <form action="#">
+                    <base-field class="mb-4" label="ФИО" size="lg"></base-field>
+                    <base-field class="mb-4" label="Номер телефона" size="lg"></base-field>
+                    <base-select label="Категория вопроса" size="lg"></base-select>
+                </form>
+            </b-modal>
+            <b-modal id="order" centered modal-class="c-modal c-modal_order" title="Забронировать" header-close-content="" ok-only ok-title="Приобрести билет">
+                <form-order></form-order>
+            </b-modal>
+            <b-modal id="order-bus" centered modal-class="c-modal c-modal_order" title="Забронировать" header-close-content="" ok-only ok-title="Приобрести билет">
+                <form-order order-type="bus"></form-order>
+            </b-modal>
+            <b-modal id="order-car" centered modal-class="c-modal c-modal_order" title="Забронировать" header-close-content="" ok-only ok-title="Приобрести билет">
+                <form-order order-type="car"></form-order>
+            </b-modal>
+            <footer class="c-footer">
+                <div class="container d-flex align-items-stretch">
+                    <div class="d-flex flex-column mr-5 pr-4">
+                        <h1 class="c-logo mt-0 mb-3"><a class="c-logo__link" href="#"><img src="./img/content/logo.png" alt=""></a></h1>
+                        <p class="m-0 c-footer__copyright">© 2020 Все права защищены.</p>
+                    </div>
+                    <div class="c-nav mr-5 pr-4">
+                        <ul class="c-nav__list d-flex flex-column align-items-start m-0">
+                            <li class="c-nav__item m-0 mb-4"><a class="c-nav__link" href="#">Расписание</a></li>
+                            <li class="c-nav__item m-0 mb-4"><a class="c-nav__link" href="#">Посылки</a></li>
+                            <li class="c-nav__item m-0 mb-4"><a class="c-nav__link" href="#">Тарифы</a></li>
+                        </ul>
+                    </div>
+                    <div class="d-block mr-5 pr-4">
+                        <h3 class="h3 m-0 mb-3">Подпишитесь на обновления</h3>
+                        <div class="c-input-group">
+                            <div class="c-field">
+                                <input class="c-field__input" type="email" placeholder="Ваш E-mail">
+                            </div>
+                            <div class="c-input-group__append">
+                                <button class="c-btn c-btn_primary text-uppercase">Подписаться</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="c-socials d-flex align-items-center mr-5 pr-4"><a class="c-socials__item" href="#"><img src="./img/icons/ok.png" alt=""></a><a class="c-socials__item" href="#"><img src="./img/icons/fb.png" alt=""></a><a class="c-socials__item" href="#"><img src="./img/icons/vk.png" alt=""></a>
+                    </div>
+                    <div class="d-flex align-items-center">
+                        <button class="c-btn c-btn_float c-btn_lg mr-4 c-footer__action c-footer__action_call">
+                            <svg width="21" height="21">
+                                <use href="#phone"></use>
+                            </svg>
+                        </button>
+                        <div class="d-flex flex-column"><a class="c-phone c-phone_lg" href="#">+7 (812) 966-55-22</a></div>
+                    </div>
+                </div>
+            </footer><svg style="display:none;">
+                <symbol id="phone" viewBox="0 0 480.56 480.56">
+                    <g>
+                        <path d="M365.354,317.9c-15.7-15.5-35.3-15.5-50.9,0c-11.9,11.8-23.8,23.6-35.5,35.6c-3.2,3.3-5.9,4-9.8,1.8 c-7.7-4.2-15.9-7.6-23.3-12.2c-34.5-21.7-63.4-49.6-89-81c-12.7-15.6-24-32.3-31.9-51.1c-1.6-3.8-1.3-6.3,1.8-9.4 c11.9-11.5,23.5-23.3,35.2-35.1c16.3-16.4,16.3-35.6-0.1-52.1c-9.3-9.4-18.6-18.6-27.9-28c-9.6-9.6-19.1-19.3-28.8-28.8 c-15.7-15.3-35.3-15.3-50.9,0.1c-12,11.8-23.5,23.9-35.7,35.5c-11.3,10.7-17,23.8-18.2,39.1c-1.9,24.9,4.2,48.4,12.8,71.3 c17.6,47.4,44.4,89.5,76.9,128.1c43.9,52.2,96.3,93.5,157.6,123.3c27.6,13.4,56.2,23.7,87.3,25.4c21.4,1.2,40-4.2,54.9-20.9 c10.2-11.4,21.7-21.8,32.5-32.7c16-16.2,16.1-35.8,0.2-51.8C403.554,355.9,384.454,336.9,365.354,317.9z" />
+                        <path d="M346.254,238.2l36.9-6.3c-5.8-33.9-21.8-64.6-46.1-89c-25.7-25.7-58.2-41.9-94-46.9l-5.2,37.1 c27.7,3.9,52.9,16.4,72.8,36.3C329.454,188.2,341.754,212,346.254,238.2z" />
+                        <path d="M403.954,77.8c-42.6-42.6-96.5-69.5-156-77.8l-5.2,37.1c51.4,7.2,98,30.5,134.8,67.2c34.9,34.9,57.8,79,66.1,127.5 l36.9-6.3C470.854,169.3,444.354,118.3,403.954,77.8z" />
+                    </g>
+                </symbol>
+                <symbol id="loupe" viewBox="0 0 512 512">
+                    <g>
+                        <g>
+                            <path d="M225.474,0C101.151,0,0,101.151,0,225.474c0,124.33,101.151,225.474,225.474,225.474
+					c124.33,0,225.474-101.144,225.474-225.474C450.948,101.151,349.804,0,225.474,0z M225.474,409.323
+					c-101.373,0-183.848-82.475-183.848-183.848S124.101,41.626,225.474,41.626s183.848,82.475,183.848,183.848
+					S326.847,409.323,225.474,409.323z" />
+                        </g>
+                    </g>
+                    <g>
+                        <g>
+                            <path d="M505.902,476.472L386.574,357.144c-8.131-8.131-21.299-8.131-29.43,0c-8.131,8.124-8.131,21.306,0,29.43l119.328,119.328
+					c4.065,4.065,9.387,6.098,14.715,6.098c5.321,0,10.649-2.033,14.715-6.098C514.033,497.778,514.033,484.596,505.902,476.472z" />
+                        </g>
+                    </g>
+                </symbol>
+                <symbol id="pin-secondary" viewBox="0 0 512 512">
+                    <g>
+                        <g>
+                            <path d="M256.001,142.93c-36.083,0-65.438,29.356-65.438,65.438s29.355,65.438,65.438,65.438
+					c36.083,0,65.438-29.356,65.438-65.438S292.083,142.93,256.001,142.93z" />
+                        </g>
+                    </g>
+                    <g>
+                        <g>
+                            <path d="M409.124,63.426C368.224,22.525,313.843,0,256.001,0S143.778,22.525,102.878,63.426
+					c-40.902,40.902-63.427,95.282-63.427,153.123c0,117.013,110.64,214.338,170.08,266.625c8.259,7.266,15.392,13.54,21.073,18.847
+					C237.725,508.675,246.861,512,256,512c9.138,0,18.276-3.327,25.396-9.977c5.683-5.308,12.815-11.582,21.074-18.848
+					c59.44-52.287,170.08-149.612,170.08-266.625C472.55,158.708,450.025,104.328,409.124,63.426z M256.001,303.797
+					c-52.621,0-95.43-42.809-95.43-95.43c0-52.621,42.809-95.43,95.43-95.43s95.43,42.809,95.43,95.43
+					C351.431,260.988,308.621,303.797,256.001,303.797z" />
+                        </g>
+                    </g>
+                </symbol>
+                <symbol id="pin" viewBox="0 0 512 512">
+                    <g>
+                        <g>
+                            <path d="M256.001,142.93c-36.083,0-65.438,29.356-65.438,65.438s29.355,65.438,65.438,65.438
+					c36.083,0,65.438-29.356,65.438-65.438S292.083,142.93,256.001,142.93z" />
+                        </g>
+                    </g>
+                    <g>
+                        <g>
+                            <path d="M409.124,63.426C368.224,22.525,313.843,0,256.001,0S143.778,22.525,102.878,63.426
+					c-40.902,40.902-63.427,95.282-63.427,153.123c0,117.013,110.64,214.338,170.08,266.625c8.259,7.266,15.392,13.54,21.073,18.847
+					C237.725,508.675,246.861,512,256,512c9.138,0,18.276-3.327,25.396-9.977c5.683-5.308,12.815-11.582,21.074-18.848
+					c59.44-52.287,170.08-149.612,170.08-266.625C472.55,158.708,450.025,104.328,409.124,63.426z M256.001,303.797
+					c-52.621,0-95.43-42.809-95.43-95.43c0-52.621,42.809-95.43,95.43-95.43s95.43,42.809,95.43,95.43
+					C351.431,260.988,308.621,303.797,256.001,303.797z" />
+                        </g>
+                    </g>
+                </symbol>
+                <symbol id="bus" viewBox="0 0 45.437 45.437">
+                    <g>
+                        <path d="M41.403,11.11c-0.371-3.627-0.962-6.451-1.897-7.561c-3.855-4.564-30.859-4.898-33.925,0
+				c-0.75,1.2-1.276,4.014-1.629,7.567c-1.139,0.134-2.026,1.093-2.026,2.267v4.443c0,0.988,0.626,1.821,1.5,2.146
+				c-0.207,6.998-0.039,14.299,0.271,17.93c0,2.803,1.883,2.338,1.883,2.338h1.765v3.026c0,1.2,1.237,2.171,2.761,2.171
+				c1.526,0,2.763-0.971,2.763-2.171V40.24h20.534v3.026c0,1.2,1.236,2.171,2.762,2.171c1.524,0,2.761-0.971,2.761-2.171V40.24h0.58
+				c0,0,2.216,0.304,2.358-1.016c0-3.621,0.228-11.646,0.04-19.221c0.929-0.291,1.607-1.147,1.607-2.177v-4.443
+				C43.512,12.181,42.582,11.206,41.403,11.11z M12.176,4.2h20.735v3.137H12.176V4.2z M12.472,36.667c-1.628,0-2.947-1.32-2.947-2.948
+				c0-1.627,1.319-2.946,2.947-2.946s2.948,1.319,2.948,2.946C15.42,35.347,14.101,36.667,12.472,36.667z M32.8,36.667
+				c-1.627,0-2.949-1.32-2.949-2.948c0-1.627,1.321-2.946,2.949-2.946s2.947,1.319,2.947,2.946
+				C35.748,35.347,34.428,36.667,32.8,36.667z M36.547,23.767H8.54V9.077h28.007V23.767z" />
+                    </g>
+                </symbol>
+                <symbol id="timer" viewBox="0 0 96 96">
+                    <g id="_09-timer" data-name="09-timer">
+                        <path d="m77.08 28.577 5.748-5.748-5.656-5.658-6.149 6.149a39.747 39.747 0 0 0 -19.023-7.12v-8.2h8v-8h-24v8h8v8.2a39.747 39.747 0 0 0 -19.023 7.12l-6.149-6.149-5.656 5.658 5.748 5.748a40 40 0 1 0 58.16 0zm-29.08 59.423a32 32 0 1 1 32-32 32.036 32.036 0 0 1 -32 32z" />
+                        <path d="m48 32v24h-24a24 24 0 1 0 24-24z" />
+                    </g>
+                </symbol>
+                <symbol id="baby" viewBox="0 0 511.69 511.69">
+                    <path d="m255.844 203.42c56.17 0 101.87-45.69 101.87-101.86 0-53.48-41.43-97.47-93.88-101.56-5.07 7.395-19.19 29.697-19.19 38.09.11 1.84 3.51 11.2 11.2 11.2 7.7 0 11.1-9.35 11.2-11.27 0-8.83 7.16-15.96 16-15.96s16 7.19 16 16.03c0 18.04-16.43 43.2-43.2 43.2s-43.2-25.16-43.2-43.2c0-9.83 4.75-21.9 10.62-33.05-40.25 13.62-69.29 51.74-69.29 96.52 0 56.17 45.7 101.86 101.87 101.86z" />
+                    <path d="m398.824 407.69c-13.604 0-25.543 8.673-29.81 21.49l-13.99 41.96c-6.663 19.986 8.298 40.55 29.22 40.55h2.36c12.77 0 24.36-8.03 28.85-19.99 16.141-43.047 14.79-36.036 14.79-52.59 0-17.32-14.1-31.42-31.42-31.42z" />
+                    <path d="m142.674 429.17c-3.113-9.34-10.347-16.584-19.51-19.75-20.389-7.088-41.72 8.165-41.72 29.69 0 16.558-1.305 9.665 14.79 52.59 4.49 11.96 16.08 19.99 28.85 19.99h2.36c20.893 0 35.89-20.54 29.22-40.55z" />
+                    <path d="m366.774 384.37v-3.88h-221.86v3.88c14.753 8.628 23.562 21.076 28.78 36.65h109.35c8.84 0 16 7.17 16 16 0 8.84-7.16 16-16 16h-98.69c3.811 11.419 9.494 25.921 3.06 46.52 43.625 16.192 93.219 16.198 136.86 0-3.766-12.058-3.911-25.618.39-38.52l13.99-41.96c4.99-14.97 15.16-27.11 28.12-34.69z" />
+                    <path d="m112.914 375.69v-11.2c0-8.84 7.16-16 16-16h14.7l15.11-60.41c2.14-8.58 10.83-13.79 19.4-11.65 8.57 2.15 13.79 10.83 11.64 19.41l-13.16 52.65h158.48l-13.16-52.65c-2.15-8.58 3.07-17.26 11.64-19.41 8.58-2.14 17.26 3.07 19.4 11.65l15.11 60.41h14.7c8.84 0 16 7.16 16 16 0 12.069-.05 11.2.05 11.2 7.04 0 13.81 1.15 20.15 3.28-7.206-64.946-30.896-157.675-96.45-161.37-.102 0-63.302 40.433-133.38-.01-65.51 3.404-89.275 96.119-96.34 161.35 6.444-2.155 13.175-3.25 20.11-3.25z" />
+                </symbol>
+                <symbol id="man" viewBox="0 0 556.38 556.38">
+                    <g>
+                        <path d="M188.434,315.146c11.767,0,21.31-9.534,21.315-21.301c0.009-0.004,0.028-130.165,0.028-130.165
+				c0-1.224,0.99-2.218,2.219-2.218h4.513c1.224,0,2.219,0.99,2.219,2.218c0,0,0,365.168,0,365.211
+				c0,15.181,12.307,27.487,27.487,27.487c15.181,0,27.487-12.307,27.487-27.487c0-0.043,0-214.884,0-214.884
+				c0-1.568,0.727-2.219,2.271-2.219h4.432c1.549,0,2.271,0.655,2.271,2.219c0,0,0,214.846,0,214.884
+				c0,15.181,12.308,27.487,27.488,27.487c15.18,0,27.487-12.307,27.487-27.487c0-0.043,0-365.211,0-365.211
+				c0-1.224,0.989-2.218,2.218-2.218h4.514c1.225,0,2.219,0.99,2.219,2.218c0,0,0.02,130.161,0.028,130.165
+				c0.01,11.767,9.549,21.301,21.315,21.301c11.771,0,21.319-9.543,21.319-21.319c0-0.067,0-146.359,0-148.104
+				c0-29.17-22.443-51.614-50.49-51.614c-0.712,0-38.417,0-56.099,0c0,0-3.543,0-8.974,0c-17.681,0-55.386,0-56.098,0
+				c-28.052,0-50.49,22.438-50.49,51.614c0,1.745,0,148.037,0,148.104C167.114,305.604,176.658,315.146,188.434,315.146z" />
+                        <circle cx="278.192" cy="40.904" r="40.904" />
+                    </g>
+                </symbol>
+            </svg>
+        </div>
+        <script type="text/javascript" src="js/app.js"></script>
+    </body>
+
+</html>

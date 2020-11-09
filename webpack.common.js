@@ -41,7 +41,8 @@ module.exports = {
 			onEnd: {
 				copy: [
 					{source: 'assets/img', destination: 'public/img'},
-					{source: 'assets/fonts', destination: 'public/fonts'}
+					{source: 'assets/fonts', destination: 'public/fonts'},
+					{source: 'public', destination: 'docs'}
 				]
 			}
 		})
