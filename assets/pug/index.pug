@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+html(lang="ru")
+	head
+		include templates/head.pug
+	body.o-page
+		#app
+			include templates/header.pug
+			.c-hero
+				img(src="./img/content/hero.jpg", alt="").c-hero__img 
+			.container
+				section.c-section
+					.c-section__title Почему стоит выбрать нас
+					.c-section__body
+						.c-advantages.d-flex.align-items-center.justify-content-between
+							-
+								var advantages = [
+									{
+										icon: 'pin',
+										title: 'Заголовок преимущества',
+										txt: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut'
+									},
+									{
+										icon: 'bus',
+										title: 'Заголовок преимущества',
+										txt: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut'
+									},
+									{
+										icon: 'timer',
+										title: 'Заголовок преимущества',
+										txt: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut'
+									}
+								];
+							each advantage in advantages
+								.c-advantages__item.d-flex.align-items-start
+									svg.c-advantages__icon.flex-shrink-0
+										use(href=`#${advantage.icon}`)
+									.d-flex.flex-column.ml-4
+										h4.c-advantages__title=advantage.title
+										p.c-advantages__text=advantage.txt
+							-;
+				section.c-section
+					.c-section__title Расписание рейсов
+					.c-section__body
+						<trip-schedule />
+				section.c-section
+					.c-section__title Тарифы на перевозку пассажиров
+					.c-section__body
+						<transportation-tariffs />
+				section.c-section
+					.c-section__title Рассчитать стоимость вашего груза
+					.c-section__body
+						.c-grid-calculator
+							.row.c-grid-calculator__row
+								.col-md-7.c-grid-calculator__col
+									.c-grid-calculator
+										.row.mb-3.pb-3.c-grid-calculator__row
+											.col-md-6.c-grid-calculator__col
+												.c-card-advantage.d-flex.justify-content-between
+													h4.c-card-advantage__title Любого <br> размера
+													img(src="./img/icons/size.png", alt="").c-card-advantage__icon
+											.col-md-6.c-grid-calculator__col
+												.c-card-advantage.d-flex.justify-content-between
+													h4.c-card-advantage__title Хрупкие <br> поссылки
+													img(src="./img/icons/fragile.png", alt="").c-card-advantage__icon
+										.row.mb-3.pb-3.c-grid-calculator__row
+											.col-md-6.c-grid-calculator__col
+												.c-card-advantage.d-flex.justify-content-between
+													h4.c-card-advantage__title Техника
+													img(src="./img/icons/washer.png", alt="").c-card-advantage__icon
+											.col-md-6.c-grid-calculator__col
+												.c-card-advantage.d-flex.justify-content-between
+													h4.c-card-advantage__title До дома
+													img(src="./img/icons/door-delivery.png", alt="").c-card-advantage__icon
+										.row.c-grid-calculator__row
+											.col-md-12.c-grid-calculator__col
+												.c-card-advantage.d-flex.justify-content-between
+													h4.c-card-advantage__title Онлайн оплата наших услуг
+													img(src="./img/icons/debit-card.png", alt="").c-card-advantage__icon
+								.col-md-5.c-grid-calculator__col.d-flex.align-items-stretch
+									.c-card-calculator
+										.c-card-calculator__header
+											h2.m-0 Рассчитать стоимость посылки
+										.d-block
+											<form-calculator />
+				.c-banner.c-banner-consultation.mb-5
+					.row.d-flex.align-items-center
+						.col-md-5
+							h2.c-banner__title Онлайн консультация
+							p.c-banner__txt.pr-4.
+								свяжитесь с консультантом в
+								любом доступном мессенджере
+						.col-md-4
+							.c-banner-consultation__socials.d-flex.align-items-center
+								img(src="./img/content/viber.png", alt="").c-banner-consultation__social
+								img(src="./img/content/telegram.png", alt="").c-banner-consultation__social
+								img(src="./img/content/whatsapp.png", alt="").c-banner-consultation__social
+						.col-md-3.d-flex.align-items-center
+							button.c-btn.c-btn_primary.c-btn_xl Заказать звонок
+				section.c-section.mb-4
+					.c-section__title.mb-3 Наши клиенты
+					.c-section__body
+						<slider-clients />
+				section.c-section
+					.c-section__title.mb-3 Отзывы о сервисе
+					.c-section__body
+						<slider-reviews />
+				section.c-section
+					.c-section__title.mb-3 Как мы работаем
+					.c-section__body
+						<slider-we-working />
+				section.c-section
+					.c-section__title.mb-3 Полезные статьи
+					.c-section__body
+						-
+							var news = [
+								{
+									img: './img/content/news/1.jpg',
+									title: 'Название новости',
+									date: '19.12.2019'
+								},
+								{
+									img: './img/content/news/1.jpg',
+									title: 'Название новости',
+									date: '19.12.2019'
+								},
+								{
+									img: './img/content/news/1.jpg',
+									title: 'Название новости',
+									date: '19.12.2019'
+								},
+								{
+									img: './img/content/news/1.jpg',
+									title: 'Название новости',
+									date: '19.12.2019'
+								},
+								{
+									img: './img/content/news/1.jpg',
+									title: 'Название новости',
+									date: '19.12.2019'
+								},
+								{
+									img: './img/content/news/1.jpg',
+									title: 'Название новости',
+									date: '19.12.2019'
+								}
+							];
+						.c-grid-news
+							.row.c-grid-news__row
+								each newsItem in news
+									.col-md-4.mb-3.c-grid-news__col
+										a(href="#").c-card-news(style=`background: url('${newsItem.img}')`)
+											.c-card-news__info
+												h4.c-card-news__title.mb-2=newsItem.title
+												span.c-card-news__date=newsItem.date
+						-;
+						.d-flex.justify-content-center.mt-3
+							button.c-btn.c-btn_primary.c-btn_lg Все новости
+							
+			include templates/footer.pug
+			include templates/icons.html

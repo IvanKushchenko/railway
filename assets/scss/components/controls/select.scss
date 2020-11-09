@@ -1,0 +1,52 @@
+.c-select{
+	position: relative;
+	$parent: &;
+
+	&__label{
+		font-size: 1.8rem;
+	}
+
+	&__select{
+		min-height: 42px;
+		width: 100%;
+		border: 1px solid $inputBorderClr;
+		border-radius: 5px;
+		padding: 0 15px;
+		appearance: none;
+
+		#{$parent}_size-lg &{
+			min-height: 52px;
+		}
+
+		&:focus{
+			outline: none;
+		}
+	}
+
+	&__body{
+		position: relative;
+
+		&:after{
+			content: '';
+			width: 10px;
+			height: 15px;
+			background: url('/img/icons/back.svg') no-repeat center center;
+			background-size: contain;
+			position: absolute;
+			top: 50%;
+			right: 15px;
+			transform: translateY(-50%) rotate(-90deg);
+			pointer-events: none;
+			transition: $transition-base;
+
+			@at-root #{$parent}_opened & {
+				transform: translateY(-50%) rotate(90deg);
+			}
+		}
+	}
+
+
+	&:focus{
+		outline: none;
+	}
+}

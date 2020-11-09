@@ -1,0 +1,21 @@
+.c-nav{
+	&__list{
+		margin: 0 -25px;
+		display: flex;
+		align-items: center;
+	}
+
+	&__item{
+		margin: 0 25px;
+	}
+
+	&__link{
+		color: $navLinkClr;
+		font-weight: 600;
+		transition: $transition-base;
+
+		&:hover{
+			color: $navLinkClrHover;
+		}
+	}
+}

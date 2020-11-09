@@ -1,0 +1,25 @@
+.c-field{
+	$parent: &;
+
+	&__input{
+		padding-left: 20px;
+		border-radius: 5px;
+		border: 1px solid $inputBorderClr;
+		min-height: 42px;
+		width: 100%;
+
+		#{$parent}_size-lg &{
+			height: 52px;
+		}
+		
+		&:focus{
+			outline: none;
+		}
+	}
+
+	&__label{
+		font-size: 1.8rem;
+	}
+
+
+}

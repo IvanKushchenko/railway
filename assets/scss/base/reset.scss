@@ -1,0 +1,58 @@
+
+
+html{
+	height: 100%;
+	font-size: 62.5%;
+}
+
+body{
+	font-family: $ff-primary;
+	font-size: 1.6rem;
+	transition: none;
+	color: $clr-hayliel;
+	background: $bodyBg;
+	margin: 0;
+}
+
+*{
+	transition: .3s;
+	box-sizing: border-box;
+}
+
+a{
+	text-decoration: none;
+	&:hover{
+		text-decoration: none;
+	}
+}
+
+svg{
+	use{
+		width: 100%;
+	}
+}
+
+ul{
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+h5{
+	font-size: 1.8rem;
+}
+
+input,
+textarea{
+	font-family: $ff-primary;
+}
+
+button{
+	border: none;
+	box-shadow: none;
+	cursor: pointer;
+	font-family: $ff-primary;
+	&:focus{
+		outline: none;
+	}
+}

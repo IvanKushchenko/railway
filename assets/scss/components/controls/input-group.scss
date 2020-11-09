@@ -1,0 +1,21 @@
+.c-input-group{
+	display: flex;
+
+	.c-field{
+		&__input{
+			height: 100%;
+			border-top-right-radius: 0;
+			border-bottom-right-radius: 0;
+		}
+	}
+
+	&__append{
+		.c-btn{
+			box-shadow: none;
+			min-width: initial;
+			padding: 0 20px;
+			border-top-left-radius: 0;
+			border-bottom-left-radius: 0;
+		}
+	}
+}

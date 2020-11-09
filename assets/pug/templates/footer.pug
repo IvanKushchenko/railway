@@ -1,0 +1,45 @@
+b-modal(id="order-call" centered modal-class="c-modal" title="Заказать звонок" header-close-content="" ok-only ok-title="Отправить")
+	form(action="#")
+		base-field(label="ФИО" size="lg").mb-4
+		base-field(label="Номер телефона" size="lg").mb-4
+		base-select(label="Категория вопроса" size="lg")
+b-modal(id="order" centered modal-class="c-modal c-modal_order" title="Забронировать" header-close-content="" ok-only ok-title="Приобрести билет")
+	form-order
+b-modal(id="order-bus" centered modal-class="c-modal c-modal_order" title="Забронировать" header-close-content="" ok-only ok-title="Приобрести билет")
+	form-order(order-type="bus")
+b-modal(id="order-car" centered modal-class="c-modal c-modal_order" title="Забронировать" header-close-content="" ok-only ok-title="Приобрести билет")
+	form-order(order-type="car")
+footer.c-footer
+	.container.d-flex.align-items-stretch
+		.d-flex.flex-column.mr-5.pr-4
+			h1.c-logo.mt-0.mb-3
+				a(href="#").c-logo__link
+					img(src="./img/content/logo.png", alt="")
+			p.m-0.c-footer__copyright © 2020 Все права защищены.
+
+		.c-nav.mr-5.pr-4
+			ul.c-nav__list.d-flex.flex-column.align-items-start.m-0
+				each link in ['Расписание', 'Посылки', 'Тарифы']
+					li.c-nav__item.m-0.mb-4
+						a(href="#").c-nav__link=link
+				-;
+		.d-block.mr-5.pr-4
+			h3.h3.m-0.mb-3 Подпишитесь на обновления
+			.c-input-group
+				.c-field
+					input(type="email" placeholder="Ваш E-mail").c-field__input
+				.c-input-group__append
+					button.c-btn.c-btn_primary.text-uppercase Подписаться
+		.c-socials.d-flex.align-items-center.mr-5.pr-4
+			-
+				var socials = ['./img/icons/ok.png', './img/icons/fb.png', './img/icons/vk.png'];
+			each socialsItem in socials
+				a(href="#").c-socials__item
+					img(src=`${socialsItem}`, alt="")
+			-;	
+		.d-flex.align-items-center
+			button.c-btn.c-btn_float.c-btn_lg.mr-4.c-footer__action.c-footer__action_call
+				svg(width="21" height="21")
+					use(href="#phone")
+			.d-flex.flex-column
+				a(href="#").c-phone.c-phone_lg +7 (812) 966-55-22

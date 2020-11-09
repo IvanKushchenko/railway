@@ -1,0 +1,30 @@
+.c-advantages{
+
+	&__item{
+		width: 100%;
+		max-width: 360px;
+		border-radius: 5px;
+		background: #fff;
+		padding: 30px 35px;
+		box-shadow: 0 10px 13px rgba(0,0,0,.1);
+	}
+
+	&__icon{
+		width: 50px;
+		height: 55px;
+		fill: $advantageIconClr;
+	    filter: drop-shadow(0 10px 13px rgba(0,0,0,.2));
+	}
+
+	&__title{
+		font-size: 1.8rem;
+		font-weight: bold;
+		margin: 0;
+		margin-bottom: 10px;
+	}
+
+	&__text{
+		margin: 0;
+		font-size: 14px;
+	}
+}

@@ -1,0 +1,99 @@
+.c-form-order{
+	$parent: &;
+
+	&__car{
+		position: relative;
+	}
+
+	&__bus{
+		padding: 20px;
+		padding-right: 80px;
+		border: 1px solid $clr-shamsiel;
+		border-radius: 10px;
+		position: relative;
+	}
+
+	&__icon{
+		&_steering-wheel{
+			position: absolute;
+			right: 20px;
+			top: 20px;
+		}
+	}
+	
+	&__sittings{
+	}
+
+	&__sittings-back,
+	&__sittings-front{
+		position: absolute;
+	    top: 50%;
+	    transform: translateY(-50%);
+	    min-height: 140px;
+	}
+
+	&__sittings-back{
+		left: 30%;
+	}
+
+	&__sittings-front{
+		right: 45%;
+	}
+
+	&__sittings-right,
+	&__sittings-left{
+		margin: -5px;
+	}
+
+	&__sittings-right{
+		margin-bottom: 15px;
+	}
+	
+
+
+	&__sitting{
+		background: $clr-stherkaa;
+		position: relative;
+		border-radius: 2px;
+		color: rgba(0,0,0,.2);
+		width: 40px;
+		height: 40px;
+		font-weight: bold;
+		font-size: 20px;
+		text-align: center;
+		line-height: 40px;
+
+		#{$parent}__sittings_bus &{
+			margin: 5px;
+			
+		}
+
+		#{$parent}__sittings_car &{
+			
+
+			&:not(:last-child){
+				margin-bottom: 10px;
+			}
+		}
+
+		&.is-active{
+			background: $clr-remliel;
+			color: #fff;
+
+			#{$parent}__sittings_bus &{
+				box-shadow: 0 2px 8px 1px rgba(0,0,0,.2);
+			}
+		}
+
+		input{
+			width: 100%;
+			height: 100%;
+			opacity: 0;
+			position: absolute;
+			left: 0;
+			top: 0;
+			cursor: pointer;
+			margin: 0;
+		}
+	}
+}

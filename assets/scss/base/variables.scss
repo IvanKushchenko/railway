@@ -1,0 +1,62 @@
+/*=============================================
+=            Colors            =
+=============================================*/
+
+/* Base */
+
+$clr-sabrathan: #ffe40a;
+$clr-remliel: #23c95e;
+$clr-hayliel: #2c2c2c;
+$clr-shamsiel: #f1f4f9;
+$clr-stherkaa: #ddd;
+$clr-selthinguc: #de5e5e;
+
+
+/* Components */
+$bodyBg: $clr-shamsiel;
+$navLinkClr: $clr-hayliel;
+$navLinkClrHover: $clr-remliel;
+$btnPrimary: $clr-remliel;
+$phoneColor: $clr-hayliel;
+$phoneColorHover: $clr-remliel;
+$actionCallFill: $clr-sabrathan;
+$advantageIconClr: $clr-remliel;
+$tabsLinkClr: $clr-hayliel;
+$tabsLinkActiveBorder: $clr-remliel;
+$reviewTitleClr: $clr-remliel;
+$reviewGradeNumberClr: $clr-sabrathan;
+$inputBorderClr: $clr-stherkaa;
+$inputRangeDotClr: $clr-remliel;
+$inputRangeProcessClr: $clr-remliel;
+$inputRangeIconClr: $clr-remliel;
+$cardTextIconClr: $clr-remliel;
+$tripScheduleDashClr: $clr-hayliel;
+$tripScheduleSearchClr: $clr-remliel;
+$cardTicketMetaNoClr: $clr-selthinguc;
+
+
+/*=============================
+=            Fonts            =
+=============================*/
+
+$ff-primary: 'Gilroy', Arial, sans-serif;
+
+
+/*=============================================
+=            GRID           =
+=============================================*/
+
+$bp-sm: map-get($grid-breakpoints, "sm");
+$bp-md: map-get($grid-breakpoints, "md");
+$bp-lg: map-get($grid-breakpoints, "lg");
+$bp-xl: map-get($grid-breakpoints, "xl");
+$bp-xxl: "1400px";
+
+
+/*==================================
+=            Transition            =
+==================================*/
+
+$transition-base: ease-in-out .3s;
+
+/*=====  End of Transition  ======*/

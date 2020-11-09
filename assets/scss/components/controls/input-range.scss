@@ -1,0 +1,30 @@
+.c-input-range{
+	&__dot{
+		font-size: 1.9rem;
+		color: #fff;
+		font-weight: bold;
+		width: 22px;
+		height: 22px;
+		background: $inputRangeDotClr;
+		line-height: 22px;
+		text-align: center;
+		border-radius: 50%;
+		box-shadow: 0 2px 5px 3px rgba(0,0,0,.1);
+		cursor: pointer;
+	}
+
+	.vue-slider-process{
+		background: $inputRangeProcessClr;
+	}
+
+	&__label{
+		font-size: 1.8rem;
+	}
+
+	&__icon{
+		width: 25px;
+		height: 20px;
+		margin-left: -10px;
+		fill: $inputRangeIconClr;
+	}
+}

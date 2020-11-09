@@ -1,0 +1,18 @@
+.c-banner-consultation {
+	padding: 30px 40px;
+	background: url('/img/content/banner-consultation-bg.jpg');
+	background-size: cover;
+
+	&__social {
+		width: 75px;
+		height: 75px;
+		object-fit: contain;
+		display: block;
+
+		&:not(:last-child) {
+			margin-right: 12px;
+		}
+
+	}
+
+}

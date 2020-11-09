@@ -1,0 +1,46 @@
+.c-btn{
+	$parent: &;
+	font-weight: bold;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	box-shadow: 0 5px 13px rgba(0,0,0,.2);
+	transition: $transition-base;
+
+	&:hover{
+		box-shadow: 0 0 0 rgba(0,0,0,.2);
+	}
+
+	&_float{
+		border-radius: 50%;
+		width: 42px;
+		height: 42px;
+		background: #fff;
+
+	}
+
+	&_float#{&}_lg{
+		width: 52px;
+		height: 52px;
+	}
+
+	&_primary{
+		background: $btnPrimary;
+		color: #fff;
+		border-radius: 5px;
+		min-width: 200px;
+		height: 42px;
+	}
+
+	&_lg:not(&_float){
+		font-size: 1.8rem;
+		height: 50px;
+		min-width: 220px;
+	}
+
+	&_xl:not(&_float){
+		font-size: 1.8rem;
+		height: 55px;
+		min-width: 250px;
+	}
+}

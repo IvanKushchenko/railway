@@ -1,0 +1,20 @@
+header.c-header
+	.container.d-flex.align-items-center.justify-content-between
+		.d-flex.align-items-center
+			h1.c-logo
+				a(href="#").c-logo__link
+					img(src="./img/content/logo.png", alt="")
+			.c-nav
+				ul.c-nav__list
+					each link in ['Расписание', 'Посылки', 'Тарифы']
+						li.c-nav__item
+							a(href="#").c-nav__link=link
+					-;
+		.d-flex.align-items-center
+			button.c-btn.c-btn_float.c-btn_lg.mr-4.c-header__action.c-header__action_call
+				svg(width="21" height="21")
+					use(href="#phone")
+			.d-flex.flex-column
+				a(href="#").c-phone.c-phone_lg.mb-3 +7 (812) 966-55-22
+				a(href="#").c-phone.c-phone_lg +7 (812) 966-55-22
+			button.c-btn.c-btn_primary.c-btn_xl.c-header__order-call(type="button" v-b-modal.order-call) Заказать звонок

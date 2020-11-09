@@ -1,0 +1,13 @@
+.c-phone{
+	color: $phoneColor;
+	font-weight: 600;
+	transition: $transition-base;
+
+	&:hover{
+		color: $phoneColorHover;
+	}
+
+	&_lg{
+		font-size: 1.8rem;
+	}
+}

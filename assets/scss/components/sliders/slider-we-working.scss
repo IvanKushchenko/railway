@@ -1,0 +1,50 @@
+.c-slider-we-working{
+
+	&__slide{
+		height: 480px;
+		
+		.plyr{
+			&__video-wrapper{
+				padding-bottom: 45% !important;
+			}
+
+			&__poster{
+				background-size: cover;
+			}
+
+
+			&--stopped .plyr__controls{
+				display: none;
+			}
+
+			&__control{
+				width: 92px;
+				height: 92px;
+				background: rgba(255,228,10, .7);
+				
+				&:hover{
+					background: rgba(255,228,10, 1);
+				}
+				
+				svg{
+				    z-index: 10;
+				    fill: $clr-hayliel;
+					left: 50%;
+					transform: translate(-50%, 0);
+				}
+
+				&:after{
+					content: '';
+					position: absolute;
+					width: 52px;
+					height: 52px;
+					top: 50%;
+					left: 50%;
+					transform: translate(-50%, -50%);
+					background: rgba(255,228,10, 1);
+					border-radius: 50%;
+				}
+			}
+		}
+	}
+}

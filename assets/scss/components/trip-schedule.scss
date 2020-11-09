@@ -1,0 +1,61 @@
+.c-trip-schedule {
+	&__header {
+		margin-bottom: 30px;
+	}
+
+	&__dash {
+		height: 2px;
+		width: 13px;
+		background: $tripScheduleDashClr;
+		margin: 0 15px;
+	}
+
+	&__field {
+		flex-grow: 1;
+
+		.c-field{
+
+			&__input{
+				border: none;
+				padding: 0;
+				font-size: 1.8rem;
+			}
+		}
+
+		&_from, &_to, &_passengers {
+			max-width: 230px;
+		}
+
+		&_calendar {
+			max-width: 300px;
+		}
+
+		&_passengers, &_calendar {
+			margin-left: 20px;
+		}
+
+		.c-card-text{
+			padding: 6px 15px;
+		}
+
+	}
+
+	&__search {
+		width: 54px;
+		height: 54px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		border-radius: 5px;
+		background: $tripScheduleSearchClr;
+		margin-left: 20px;
+
+		svg {
+			fill: #fff;
+			width: 25px;
+			height: 25px;
+		}
+
+	}
+
+}
