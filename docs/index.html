@@ -12,25 +12,34 @@
     <body class="o-page">
         <div id="app">
             <header class="c-header">
-                <div class="container d-flex align-items-center justify-content-between">
+                <div class="container d-flex align-items-center justify-content-between justify-content-lg-start">
                     <div class="d-flex align-items-center">
-                        <h1 class="c-logo"><a class="c-logo__link" href="#"><img src="./img/content/logo.png" alt=""></a></h1>
-                        <div class="c-nav">
-                            <ul class="c-nav__list">
+                        <h1 class="c-logo m-0 mr-lg-5"><a class="c-logo__link" href="#"><img src="./img/content/logo.png" alt=""></a></h1>
+                    </div>
+                    <div class="d-lg-none">
+                        <button class="c-burger" @click="toggleMenu">
+                            <svg>
+                                <use href="#burger"></use>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="c-header__menu align-items-center justify-content-between flex-column flex-lg-row flex-grow-1" :class="{'is-open': menu.show}">
+                        <div class="c-nav flex-grow-1 d-flex flex-lg-grow-0 flex-column flex-lg-row justify-content-center justify-content-lg-center">
+                            <ul class="c-nav__list flex-column flex-lg-row">
                                 <li class="c-nav__item"><a class="c-nav__link" href="#">Расписание</a></li>
                                 <li class="c-nav__item"><a class="c-nav__link" href="#">Посылки</a></li>
                                 <li class="c-nav__item"><a class="c-nav__link" href="#">Тарифы</a></li>
                             </ul>
                         </div>
-                    </div>
-                    <div class="d-flex align-items-center">
-                        <button class="c-btn c-btn_float c-btn_lg mr-4 c-header__action c-header__action_call">
-                            <svg width="21" height="21">
-                                <use href="#phone"></use>
-                            </svg>
-                        </button>
-                        <div class="d-flex flex-column"><a class="c-phone c-phone_lg mb-3" href="#">+7 (812) 966-55-22</a><a class="c-phone c-phone_lg" href="#">+7 (812) 966-55-22</a></div>
-                        <button class="c-btn c-btn_primary c-btn_xl c-header__order-call" type="button" v-b-modal.order-call>Заказать звонок</button>
+                        <div class="d-flex d-lg-none d-xl-flex mb-5 mb-lg-0">
+                            <button class="c-btn c-btn_float c-btn_lg mr-4 c-header__action c-header__action_call">
+                                <svg width="21" height="21">
+                                    <use href="#phone"></use>
+                                </svg>
+                            </button>
+                            <div class="d-flex flex-column"><a class="c-phone c-phone_lg mb-3" href="#">+7 (812) 966-55-22</a><a class="c-phone c-phone_lg" href="#">+7 (812) 966-55-22</a></div>
+                        </div>
+                        <button class="c-btn c-btn_primary c-btn_xl c-header__order-call mb-5 mb-lg-0" type="button" v-b-modal.order-call>Заказать звонок</button>
                     </div>
                 </div>
             </header>
@@ -39,8 +48,8 @@
                 <section class="c-section">
                     <div class="c-section__title">Почему стоит выбрать нас</div>
                     <div class="c-section__body">
-                        <div class="c-advantages d-flex align-items-center justify-content-between">
-                            <div class="c-advantages__item d-flex align-items-start">
+                        <div class="c-advantages d-flex align-items-center flex-column flex-lg-row justify-content-between">
+                            <div class="c-advantages__item mb-3 mb-lg-0 d-flex align-items-start">
                                 <svg class="c-advantages__icon flex-shrink-0">
                                     <use href="#pin"></use>
                                 </svg>
@@ -49,7 +58,7 @@
                                     <p class="c-advantages__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut</p>
                                 </div>
                             </div>
-                            <div class="c-advantages__item d-flex align-items-start">
+                            <div class="c-advantages__item mb-3 mb-lg-0 d-flex align-items-start">
                                 <svg class="c-advantages__icon flex-shrink-0">
                                     <use href="#bus"></use>
                                 </svg>
@@ -58,7 +67,7 @@
                                     <p class="c-advantages__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut</p>
                                 </div>
                             </div>
-                            <div class="c-advantages__item d-flex align-items-start">
+                            <div class="c-advantages__item mb-3 mb-lg-0 d-flex align-items-start">
                                 <svg class="c-advantages__icon flex-shrink-0">
                                     <use href="#timer"></use>
                                 </svg>
@@ -87,27 +96,27 @@
                     <div class="c-section__body">
                         <div class="c-grid-calculator">
                             <div class="row c-grid-calculator__row">
-                                <div class="col-md-7 c-grid-calculator__col">
+                                <div class="col-lg-7 c-grid-calculator__col mb-4 mb-lg-0">
                                     <div class="c-grid-calculator">
-                                        <div class="row mb-3 pb-3 c-grid-calculator__row">
-                                            <div class="col-md-6 c-grid-calculator__col">
+                                        <div class="row mb-md-3 pb-md-3 c-grid-calculator__row">
+                                            <div class="col-md-6 c-grid-calculator__col mb-3 mb-md-0">
                                                 <div class="c-card-advantage d-flex justify-content-between">
                                                     <h4 class="c-card-advantage__title">Любого <br> размера</h4><img class="c-card-advantage__icon" src="./img/icons/size.png" alt="">
                                                 </div>
                                             </div>
-                                            <div class="col-md-6 c-grid-calculator__col">
+                                            <div class="col-md-6 c-grid-calculator__col mb-3 mb-md-0">
                                                 <div class="c-card-advantage d-flex justify-content-between">
                                                     <h4 class="c-card-advantage__title">Хрупкие <br> поссылки</h4><img class="c-card-advantage__icon" src="./img/icons/fragile.png" alt="">
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="row mb-3 pb-3 c-grid-calculator__row">
-                                            <div class="col-md-6 c-grid-calculator__col">
+                                        <div class="row mb-md-3 pb-md-3 c-grid-calculator__row">
+                                            <div class="col-md-6 c-grid-calculator__col mb-3 mb-md-0">
                                                 <div class="c-card-advantage d-flex justify-content-between">
                                                     <h4 class="c-card-advantage__title">Техника</h4><img class="c-card-advantage__icon" src="./img/icons/washer.png" alt="">
                                                 </div>
                                             </div>
-                                            <div class="col-md-6 c-grid-calculator__col">
+                                            <div class="col-md-6 c-grid-calculator__col mb-3 mb-md-0">
                                                 <div class="c-card-advantage d-flex justify-content-between">
                                                     <h4 class="c-card-advantage__title">До дома</h4><img class="c-card-advantage__icon" src="./img/icons/door-delivery.png" alt="">
                                                 </div>
@@ -122,7 +131,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-md-5 c-grid-calculator__col d-flex align-items-stretch">
+                                <div class="col-lg-5 c-grid-calculator__col d-flex align-items-stretch">
                                     <div class="c-card-calculator">
                                         <div class="c-card-calculator__header">
                                             <h2 class="m-0">Рассчитать стоимость посылки</h2>
@@ -138,18 +147,22 @@
                 </section>
                 <div class="c-banner c-banner-consultation mb-5">
                     <div class="row d-flex align-items-center">
-                        <div class="col-md-5">
+                        <div class="col-md-5 mb-4 mb-md-0">
                             <h2 class="c-banner__title">Онлайн консультация</h2>
                             <p class="c-banner__txt pr-4">
                                 свяжитесь с консультантом в
                                 любом доступном мессенджере
                             </p>
                         </div>
-                        <div class="col-md-4">
-                            <div class="c-banner-consultation__socials d-flex align-items-center"><img class="c-banner-consultation__social" src="./img/content/viber.png" alt=""><img class="c-banner-consultation__social" src="./img/content/telegram.png" alt=""><img class="c-banner-consultation__social" src="./img/content/whatsapp.png" alt=""></div>
-                        </div>
-                        <div class="col-md-3 d-flex align-items-center">
-                            <button class="c-btn c-btn_primary c-btn_xl">Заказать звонок</button>
+                        <div class="col-md-7">
+                            <div class="row">
+                                <div class="col-lg-6 mb-4 mb-lg-0">
+                                    <div class="c-banner-consultation__socials d-flex align-items-center"><img class="c-banner-consultation__social" src="./img/content/viber.png" alt=""><img class="c-banner-consultation__social" src="./img/content/telegram.png" alt=""><img class="c-banner-consultation__social" src="./img/content/whatsapp.png" alt=""></div>
+                                </div>
+                                <div class="col-lg-6 d-flex align-items-center">
+                                    <button class="c-btn c-btn_primary c-btn_xl">Заказать звонок</button>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -176,32 +189,32 @@
                     <div class="c-section__body">
                         <div class="c-grid-news">
                             <div class="row c-grid-news__row">
-                                <div class="col-md-4 mb-3 c-grid-news__col"><a class="c-card-news" href="#" style="background: url('./img/content/news/1.jpg')">
+                                <div class="col-md-6 col-lg-4 mb-3 c-grid-news__col"><a class="c-card-news" href="#" style="background-image: url('./img/content/news/1.jpg')">
                                         <div class="c-card-news__info">
                                             <h4 class="c-card-news__title mb-2">Название новости</h4><span class="c-card-news__date">19.12.2019</span>
                                         </div>
                                     </a></div>
-                                <div class="col-md-4 mb-3 c-grid-news__col"><a class="c-card-news" href="#" style="background: url('./img/content/news/1.jpg')">
+                                <div class="col-md-6 col-lg-4 mb-3 c-grid-news__col"><a class="c-card-news" href="#" style="background-image: url('./img/content/news/1.jpg')">
                                         <div class="c-card-news__info">
                                             <h4 class="c-card-news__title mb-2">Название новости</h4><span class="c-card-news__date">19.12.2019</span>
                                         </div>
                                     </a></div>
-                                <div class="col-md-4 mb-3 c-grid-news__col"><a class="c-card-news" href="#" style="background: url('./img/content/news/1.jpg')">
+                                <div class="col-md-6 col-lg-4 mb-3 c-grid-news__col"><a class="c-card-news" href="#" style="background-image: url('./img/content/news/1.jpg')">
                                         <div class="c-card-news__info">
                                             <h4 class="c-card-news__title mb-2">Название новости</h4><span class="c-card-news__date">19.12.2019</span>
                                         </div>
                                     </a></div>
-                                <div class="col-md-4 mb-3 c-grid-news__col"><a class="c-card-news" href="#" style="background: url('./img/content/news/1.jpg')">
+                                <div class="col-md-6 col-lg-4 mb-3 c-grid-news__col"><a class="c-card-news" href="#" style="background-image: url('./img/content/news/1.jpg')">
                                         <div class="c-card-news__info">
                                             <h4 class="c-card-news__title mb-2">Название новости</h4><span class="c-card-news__date">19.12.2019</span>
                                         </div>
                                     </a></div>
-                                <div class="col-md-4 mb-3 c-grid-news__col"><a class="c-card-news" href="#" style="background: url('./img/content/news/1.jpg')">
+                                <div class="col-md-6 col-lg-4 mb-3 c-grid-news__col"><a class="c-card-news" href="#" style="background-image: url('./img/content/news/1.jpg')">
                                         <div class="c-card-news__info">
                                             <h4 class="c-card-news__title mb-2">Название новости</h4><span class="c-card-news__date">19.12.2019</span>
                                         </div>
                                     </a></div>
-                                <div class="col-md-4 mb-3 c-grid-news__col"><a class="c-card-news" href="#" style="background: url('./img/content/news/1.jpg')">
+                                <div class="col-md-6 col-lg-4 mb-3 c-grid-news__col"><a class="c-card-news" href="#" style="background-image: url('./img/content/news/1.jpg')">
                                         <div class="c-card-news__info">
                                             <h4 class="c-card-news__title mb-2">Название новости</h4><span class="c-card-news__date">19.12.2019</span>
                                         </div>
@@ -231,30 +244,32 @@
                 <form-order order-type="car"></form-order>
             </b-modal>
             <footer class="c-footer">
-                <div class="container d-flex align-items-stretch">
-                    <div class="d-flex flex-column mr-5 pr-4">
+                <div class="container d-flex flex-column flex-md-row align-items-stretch justify-content-between">
+                    <div class="d-flex flex-column mr-xl-5 pr-4 mb-4 mb-md-0">
                         <h1 class="c-logo mt-0 mb-3"><a class="c-logo__link" href="#"><img src="./img/content/logo.png" alt=""></a></h1>
                         <p class="m-0 c-footer__copyright">© 2020 Все права защищены.</p>
                     </div>
-                    <div class="c-nav mr-5 pr-4">
-                        <ul class="c-nav__list d-flex flex-column align-items-start m-0">
-                            <li class="c-nav__item m-0 mb-4"><a class="c-nav__link" href="#">Расписание</a></li>
-                            <li class="c-nav__item m-0 mb-4"><a class="c-nav__link" href="#">Посылки</a></li>
-                            <li class="c-nav__item m-0 mb-4"><a class="c-nav__link" href="#">Тарифы</a></li>
-                        </ul>
-                    </div>
-                    <div class="d-block mr-5 pr-4">
-                        <h3 class="h3 m-0 mb-3">Подпишитесь на обновления</h3>
-                        <div class="c-input-group">
-                            <div class="c-field">
-                                <input class="c-field__input" type="email" placeholder="Ваш E-mail">
-                            </div>
-                            <div class="c-input-group__append">
-                                <button class="c-btn c-btn_primary text-uppercase">Подписаться</button>
+                    <div class="d-flex flex-column flex-sm-row mb-4 mb-md-0">
+                        <div class="c-nav mr-5 pr-4 mb-4 mb-md-0">
+                            <ul class="c-nav__list d-flex flex-column align-items-start m-0">
+                                <li class="c-nav__item m-0 mb-4"><a class="c-nav__link" href="#">Расписание</a></li>
+                                <li class="c-nav__item m-0 mb-4"><a class="c-nav__link" href="#">Посылки</a></li>
+                                <li class="c-nav__item m-0 mb-4"><a class="c-nav__link" href="#">Тарифы</a></li>
+                            </ul>
+                        </div>
+                        <div class="d-md-none d-xl-block mr-5 pr-4 mb-4 mb-md-0">
+                            <h3 class="h3 m-0 mb-3">Подпишитесь на обновления</h3>
+                            <div class="c-input-group">
+                                <div class="c-field">
+                                    <input class="c-field__input" type="email" placeholder="Ваш E-mail">
+                                </div>
+                                <div class="c-input-group__append">
+                                    <button class="c-btn c-btn_primary text-uppercase">Подписаться</button>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="c-socials d-flex align-items-center mr-5 pr-4"><a class="c-socials__item" href="#"><img src="./img/icons/ok.png" alt=""></a><a class="c-socials__item" href="#"><img src="./img/icons/fb.png" alt=""></a><a class="c-socials__item" href="#"><img src="./img/icons/vk.png" alt=""></a>
+                    <div class="c-socials d-flex align-items-center mr-xl-5 pr-4 mb-4 mb-md-0"><a class="c-socials__item" href="#"><img src="./img/icons/ok.png" alt=""></a><a class="c-socials__item" href="#"><img src="./img/icons/fb.png" alt=""></a><a class="c-socials__item" href="#"><img src="./img/icons/vk.png" alt=""></a>
                     </div>
                     <div class="d-flex align-items-center">
                         <button class="c-btn c-btn_float c-btn_lg mr-4 c-footer__action c-footer__action_call">
@@ -363,6 +378,24 @@
 				c0-29.17-22.443-51.614-50.49-51.614c-0.712,0-38.417,0-56.099,0c0,0-3.543,0-8.974,0c-17.681,0-55.386,0-56.098,0
 				c-28.052,0-50.49,22.438-50.49,51.614c0,1.745,0,148.037,0,148.104C167.114,305.604,176.658,315.146,188.434,315.146z" />
                         <circle cx="278.192" cy="40.904" r="40.904" />
+                    </g>
+                </symbol>
+                <symbol id="burger" viewBox="0 0 512 512">
+                    <g>
+                        <g>
+                            <path d="M492,236H20c-11.046,0-20,8.954-20,20c0,11.046,8.954,20,20,20h472c11.046,0,20-8.954,20-20S503.046,236,492,236z" />
+                        </g>
+                    </g>
+                    <g>
+                        <g>
+                            <path d="M492,76H20C8.954,76,0,84.954,0,96s8.954,20,20,20h472c11.046,0,20-8.954,20-20S503.046,76,492,76z" />
+                        </g>
+                    </g>
+                    <g>
+                        <g>
+                            <path d="M492,396H20c-11.046,0-20,8.954-20,20c0,11.046,8.954,20,20,20h472c11.046,0,20-8.954,20-20
+					C512,404.954,503.046,396,492,396z" />
+                        </g>
                     </g>
                 </symbol>
             </svg>
