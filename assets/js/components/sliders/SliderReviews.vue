@@ -51,7 +51,7 @@ export default {
 				}
 			],
 			sliderOptions: {
-				slidesPerView: 3,
+				slidesPerView: 1,
 				loop: true,
 				pagination: {
 					el: '.c-slider-reviews .swiper-pagination',
@@ -59,7 +59,15 @@ export default {
 					dynamicBullets: true,
 					dynamicMainBullets: 4
 				},
-				spaceBetween: 15
+				spaceBetween: 15,
+				breakpoints: {
+					512: {
+						slidesPerView: 2,
+					},
+					768: {
+						slidesPerView: 3,
+					}
+				}
 			}
 		}
 	},

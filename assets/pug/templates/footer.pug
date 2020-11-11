@@ -10,27 +10,27 @@ b-modal(id="order-bus" centered modal-class="c-modal c-modal_order" title="За�
 b-modal(id="order-car" centered modal-class="c-modal c-modal_order" title="Забронировать" header-close-content="" ok-only ok-title="Приобрести билет")
 	form-order(order-type="car")
 footer.c-footer
-	.container.d-flex.align-items-stretch
-		.d-flex.flex-column.mr-5.pr-4
+	.container.d-flex.flex-column.flex-md-row.align-items-stretch.justify-content-between
+		.d-flex.flex-column.mr-xl-5.pr-4.mb-4.mb-md-0
 			h1.c-logo.mt-0.mb-3
 				a(href="#").c-logo__link
 					img(src="./img/content/logo.png", alt="")
 			p.m-0.c-footer__copyright © 2020 Все права защищены.
-
-		.c-nav.mr-5.pr-4
-			ul.c-nav__list.d-flex.flex-column.align-items-start.m-0
-				each link in ['Расписание', 'Посылки', 'Тарифы']
-					li.c-nav__item.m-0.mb-4
-						a(href="#").c-nav__link=link
-				-;
-		.d-block.mr-5.pr-4
-			h3.h3.m-0.mb-3 Подпишитесь на обновления
-			.c-input-group
-				.c-field
-					input(type="email" placeholder="Ваш E-mail").c-field__input
-				.c-input-group__append
-					button.c-btn.c-btn_primary.text-uppercase Подписаться
-		.c-socials.d-flex.align-items-center.mr-5.pr-4
+		.d-flex.flex-column.flex-sm-row.mb-4.mb-md-0
+			.c-nav.mr-5.pr-4.mb-4.mb-md-0
+				ul.c-nav__list.d-flex.flex-column.align-items-start.m-0
+					each link in ['Расписание', 'Посылки', 'Тарифы']
+						li.c-nav__item.m-0.mb-4
+							a(href="#").c-nav__link=link
+					-;
+			.d-md-none.d-xl-block.mr-5.pr-4.mb-4.mb-md-0
+				h3.h3.m-0.mb-3 Подпишитесь на обновления
+				.c-input-group
+					.c-field
+						input(type="email" placeholder="Ваш E-mail").c-field__input
+					.c-input-group__append
+						button.c-btn.c-btn_primary.text-uppercase Подписаться
+		.c-socials.d-flex.align-items-center.mr-xl-5.pr-4.mb-4.mb-md-0
 			-
 				var socials = ['./img/icons/ok.png', './img/icons/fb.png', './img/icons/vk.png'];
 			each socialsItem in socials

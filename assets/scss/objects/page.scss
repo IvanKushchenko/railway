@@ -1,3 +1,7 @@
 .o-page{
 	padding-top: 116px;
+
+	@media (max-width: $bp-lg) {
+		padding-top: 60px;
+	}
 }

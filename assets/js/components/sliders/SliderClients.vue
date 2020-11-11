@@ -24,7 +24,7 @@ export default {
 		return {
 			clients: ['otpbank', 'unicredit', 'tinkoff', 'eastbank'],
 			sliderOptions: {
-				slidesPerView: 4,
+				slidesPerView: 1,
 				loop: true,
 				pagination: {
 					el: '.c-slider-clients .swiper-pagination',
@@ -32,7 +32,15 @@ export default {
 					dynamicBullets: true,
 					dynamicMainBullets: 4
 				},
-				spaceBetween: 5
+				spaceBetween: 5,
+				breakpoints: {
+					512: {
+						slidesPerView: 2,
+					},
+					768: {
+						slidesPerView: 4,
+					}
+				}
 			}
 		}
 	},

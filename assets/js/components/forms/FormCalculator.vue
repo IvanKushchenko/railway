@@ -2,7 +2,7 @@
 	<div class="c-form-calculator">
 		<div class="c-grid-calculator mb-4 pb-3">
 			<div class="row c-grid-calculator__row">
-				<div class="col-md-6 c-grid-calculator__col">
+				<div class="col-md-6 c-grid-calculator__col mb-3 mb-md-0">
 					<base-field placeholder="Откуда"/>
 				</div>
 				<div class="col-md-6 c-grid-calculator__col">
@@ -13,15 +13,15 @@
 		<p class="m-0 mb-4">Вес ( в кг ), Габариты ДхШхВ ( в см )</p>
 		<div class="c-grid-calculator mb-4 pb-3">
 			<div class="row mb-2 c-grid-calculator__row">
-				<div class="col-md-3 c-grid-calculator__col"><base-field /></div>
-				<div class="col-md-3 c-grid-calculator__col"><base-field /></div>
-				<div class="col-md-3 c-grid-calculator__col"><base-field /></div>
-				<div class="col-md-3 c-grid-calculator__col"><base-field /></div>
+				<div class="col-md-3 c-grid-calculator__col mb-3 mb-md-0"><base-field /></div>
+				<div class="col-md-3 c-grid-calculator__col mb-3 mb-md-0"><base-field /></div>
+				<div class="col-md-3 c-grid-calculator__col mb-3 mb-md-0"><base-field /></div>
+				<div class="col-md-3 c-grid-calculator__col mb-3 mb-md-0"><base-field /></div>
 			</div>
 		</div>
 		<div class="c-grid-calculator">
 			<div class="row c-grid-calculator__row">
-				<div class="col-md-6 c-grid-calculator__col">
+				<div class="col-md-6 c-grid-calculator__col mb-3 mb-md-0">
 					<base-select :options="options" />
 				</div>
 				<div class="col-md-6 c-grid-calculator__col">

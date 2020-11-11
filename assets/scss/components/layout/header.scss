@@ -1,5 +1,5 @@
-.c-header{
-	box-shadow: 0px 10px 20px rgba(0,0,0,.05);
+.c-header {
+	box-shadow: 0px 10px 20px rgba(0, 0, 0, .05);
 	position: fixed;
 	top: 0;
 	left: 0;
@@ -9,18 +9,42 @@
 	display: flex;
 	align-items: center;
 	z-index: 100;
-	
-	.c-logo{
-		margin-right: 40px;
+
+	@media (max-width: $bp-lg) {
+		height: 60px;
 	}
 
-	&__order-call{
-		margin-left: 60px;
+	&__order-call {
+
+		@media (min-width: $bp-lg) {
+			margin-left: 60px;
+		}
 	}
 
-	&__action{
-		&_call{
+	&__action {
+		&_call {
 			fill: $actionCallFill;
+		}
+
+	}
+
+	&__menu{
+		@media (max-width: $bp-lg) {
+			display: none;
+			width: 100%;
+			background: #fff;
+			height: calc(100% - 60px);
+			position: fixed;
+			left: 0;
+			top: 60px;
+
+			&.is-open{
+				display: flex;
+			}
+		}
+
+		@media (min-width: $bp-lg) {
+			display: flex;
 		}
 	}
 }

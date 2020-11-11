@@ -5,6 +5,10 @@
 	background: #fff;
 	border-radius: 5px;
 	box-shadow: 0 2px 13px 5px rgba(0,0,0,.05);
+
+	@media (max-width: $bp-sm) {
+		padding: 25px 15px;
+	}
 	
 	&__meta{
 		font-size: 1.8rem;

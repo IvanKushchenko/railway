@@ -2,6 +2,14 @@
 
 	&__slide{
 		height: 480px;
+
+		@media (max-width: $bp-md) {
+			height: 240px;
+		}
+
+		@media (max-width: $bp-sm) {
+			height: 180px;
+		}
 		
 		.plyr{
 			&__video-wrapper{

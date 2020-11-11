@@ -2,8 +2,8 @@
 	<div class="">
 		<b-tabs class="c-tabs" nav-class="c-tabs__nav">
 			<b-tab :title="tariffItem.title" :active="!tariffIndex" v-for="(tariffItem, tariffIndex) in tariffs">
-				<div class="d-flex align-items-center pt-5">
-					<div v-for="(tariffCarItem, tariffCarIndex) in tariffItem.list" class="c-tariff">
+				<div class="d-flex flex-column flex-lg-row align-items-center pt-5">
+					<div v-for="(tariffCarItem, tariffCarIndex) in tariffItem.list" class="c-tariff mb-4 mb-lg-0">
 						<div class="c-tariff__thumb">
 							<img :src="require('@/img/content/bus.png')" alt="">
 						</div>

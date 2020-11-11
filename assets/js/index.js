@@ -21,6 +21,13 @@ new Vue({
 	directives: {
 		'b-modal': VBModal
 	},
+	data(){
+		return {
+			menu: {
+				show: false
+			}
+		}
+	},
 	components: {
 		TransportationTariffs,
 		SliderClients,
@@ -30,5 +37,10 @@ new Vue({
 		FormOrder,
 		TripSchedule,
 		BModal
+	},
+	methods: {
+		toggleMenu(){
+			this.menu.show = !this.menu.show;
+		}
 	}
 });

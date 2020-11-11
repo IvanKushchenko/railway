@@ -1,6 +1,10 @@
 .c-trip-schedule {
 	&__header {
 		margin-bottom: 30px;
+
+		@media (max-width: $bp-lg) {
+			flex-wrap: wrap;
+		}
 	}
 
 	&__dash {
@@ -8,6 +12,10 @@
 		width: 13px;
 		background: $tripScheduleDashClr;
 		margin: 0 15px;
+
+		@media (max-width: $bp-lg) {
+			margin-top: 25px;
+		}
 	}
 
 	&__field {
@@ -24,14 +32,50 @@
 
 		&_from, &_to, &_passengers {
 			max-width: 230px;
+
+			@media (max-width: $bp-lg) {
+				max-width: initial;
+
+			}
+		}
+
+		&_from{
+			@media (max-width: $bp-md) {
+				margin-bottom: 20px;
+			}
+		}
+
+		&_from, &_to{
+			@media (max-width: $bp-md) {
+				width: 100%;
+			}
 		}
 
 		&_calendar {
 			max-width: 300px;
+
+			@media (max-width: $bp-lg) {
+				margin-right: 30px;
+			}
+
+			@media (max-width: $bp-md) {
+				max-width: initial;
+				margin-right: 0;
+			}
 		}
 
 		&_passengers, &_calendar {
 			margin-left: 20px;
+
+			@media (max-width: $bp-lg) {
+				margin-top: 30px;
+				margin-left: 0;
+			}
+
+			@media (max-width: $bp-md) {
+				width: 100%;
+				margin-top: 20px;
+			}
 		}
 
 		.c-card-text{
@@ -49,6 +93,16 @@
 		border-radius: 5px;
 		background: $tripScheduleSearchClr;
 		margin-left: 20px;
+
+		@media (max-width: $bp-lg) {
+			margin-top: 30px;
+		}
+
+		@media (max-width: $bp-md) {
+			margin-top: 20px;
+			width: 100%;
+			margin-left: 0;
+		}
 
 		svg {
 			fill: #fff;
